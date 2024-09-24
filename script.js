@@ -46,20 +46,43 @@ dataPerson.push(per2)
 dataPerson.push(per3)
 dataPerson.push(per4)
 
-console.log("For Loop")
-
-for (let i=0; i < dataPerson.length; i++){
-   let item  = dataPerson[i]
-   console.log(item.introduce)
-}
-
-
-// forEach 
-
-console.log("For Each")
 
 dataPerson.forEach( (item)=>{
 
     console.log(item.introduce())
 
 })
+
+
+// Pascal Case
+
+class BankAccount {
+
+    constructor( pAccountHolder, pBalance, pAccountNumber ){
+        this.accountHolder = pAccountHolder
+        this.balance = pBalance
+        this.accountNumber = pAccountNumber
+    } 
+
+    deposit(amount){
+       this.balance = this.balance + amount 
+    }
+    withdraw(amount){
+        this.balance = this.balance-amount
+    }
+    getBalance(){
+        return this.balance
+    }
+
+}
+
+let account1 = new BankAccount( "Fernando Lopez", 100, "101154")
+account1.deposit(50)
+account1.deposit(100)
+console.log(account1.getBalance())
+
+
+let account2 = new BankAccount("Julie", 1000, "4565487")
+account2.deposit(500)
+account2.withdraw(750)
+console.log(account2.getBalance())
