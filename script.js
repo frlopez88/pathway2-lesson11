@@ -20,3 +20,5 @@ console.log(keys)
 
 let values = Object.values(car)
 console.log(values)
+
+
